@@ -1,0 +1,151 @@
+body{
+  background:white;
+  color:black;
+  font-family: 'Gotu', sans-serif;
+}
+/* nav bar */
+.navbar-toggler{
+  outline: none !important;
+}
+
+.toggler-icon{
+  font-size: 40px;
+  color:rgb(27, 158, 59);
+}
+.nav-link{
+  color:rgb(20, 23, 165);
+  font-size: 25px;
+  transition: all 1s ease-in-out
+}
+.nav-link:hover{
+  color:black;
+}
+/* end of nav links */
+/* info-items */
+.cart-info-icon{
+  color:black;
+  cursor:pointer;
+}
+
+#cart-info{
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 7px;
+  cursor:pointer;
+}
+#cart-info:hover{
+  background:pink;
+  color:white;
+  border-color: pink;
+
+
+}
+
+#cart-info:hover .cart-info-icon{
+  color:white;
+}
+
+/* end of info-items */
+/* banner */
+.max-height-bg{
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
+  min-height: calc(100vh - 76px);
+  /* transparency a is 0-1 */
+  background: linear-gradient(rgba(249, 228, 148, 0.5),rgba(249, 228, 148, 0.5)),
+  url("../images/bg.jpg") center/cover fixed no-repeat;
+  position:relative;
+}
+.banner{
+  color:white;
+  margin-top: 50px;
+}
+.banner-title{
+  color:#fe346e;
+  font-size: 70px;
+}
+.banner-link{
+  font-size: 20px;
+  color:black;
+  border:3px solid black;
+}
+.banner-link:hover{
+  background: black;
+  color:#fe346e;
+}
+/* banner ends */
+/* cart */
+.cart{
+  position:absolute;
+  top:0;
+  right:0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+  /* width:400px; */
+  width:0;
+  overflow:hidden;
+}
+
+.show-cart{
+  width:400px;
+  padding:2% 1.5%;
+  top:0;
+  right:0;
+  background-color: rgba(255, 255, 255, 0.5);
+transform:rotateY(-360deg);
+}
+/* cart ends here */
+/* about */
+.about-img-container{
+  position: relative;
+}
+
+.about-img-container::before{
+  content:"";
+  position:absolute;
+  top:1.5rem;
+  left:1.7rem;
+  width:100%;
+  height:100%;
+  outline:5px solid #fe346e;
+  /* https://www.w3schools.com/cssref/pr_pos_z-index.asp */
+  z-index:-1;
+  transition:all 1s ease-in-out;
+}
+.about-img-container:hover:before{
+  top:0;
+  left:0;
+}
+/* about ends here */
+/* store */
+.store{
+background: lightgray;
+
+}
+.img-container{
+  cursor:pointer;
+  position: relative;
+  overflow: hidden;
+  }
+  .store-img{
+    transition:all 1s ease-in-out;
+  }
+  .img-container:hover .store-img{
+    transform:scale(1.2);
+  }
+
+.store-item-icon{
+  position: absolute;
+  bottom:0;
+  right:0;
+  padding:7px;
+  background: red;
+  transition:all 1s ease-in-out;
+  transform:translate(100%,100%);
+  border-top-left-radius:3px;
+}
+.img-container:hover .store-item-icon{
+  transform: translate(0,0);
+}
+.footer{
+  color:lightblue;
+}
